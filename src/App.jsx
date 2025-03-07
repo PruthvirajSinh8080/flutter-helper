@@ -1,7 +1,11 @@
 import Hero from "./layout/Hero";
-import Navbar from "./layout/Navbar";
+// import Navbar from "./layout/Navbar";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import TutorialsList from "./pages/TutorialsList";
+import SnippetsPage from "./pages/SnippetsPage";
+import PageDetail from "./pages/PageDetails";
+import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -16,7 +20,10 @@ function App() {
             </>
           }
         ></Route>
-        <Route path="/tutorial" element={<TutorialsList />}></Route>
+        <Route path="/snippets" element={<SnippetsPage />} />
+        <Route path="/page/:pageId" element={<PageDetail />} />
+        <Route path="*" element={<NotFound />} />
+        {/* <Route path="/tutorial" element={<TutorialsList />}></Route> */}
       </Routes>
     </Router>
   );
