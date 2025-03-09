@@ -3,21 +3,21 @@ import React from "react";
 
 const ContributorCard = ({ name, role, avatar, github, twitter }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+    <div className="rounded-lg border border-white shadow-md p-6 flex flex-col items-center">
       <img
         src={avatar}
         alt={name}
         className="w-24 h-24 rounded-full object-cover mb-4"
       />
       <h3 className="text-xl font-bold">{name}</h3>
-      <p className="text-gray-600 mb-4">{role}</p>
+      <p className="text-white mb-4">{role}</p>
       <div className="flex space-x-4">
         {github && (
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-flutter-blue"
+            className="text-white hover:text-flutter-blue"
           >
             <svg
               className="w-6 h-6"
@@ -38,7 +38,7 @@ const ContributorCard = ({ name, role, avatar, github, twitter }) => {
             href={twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-flutter-blue"
+            className="text-white hover:text-flutter-blue"
           >
             <svg
               className="w-6 h-6"

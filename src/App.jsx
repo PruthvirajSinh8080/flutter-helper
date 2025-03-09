@@ -15,7 +15,7 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar />
+              {/* <Navbar /> */}
               <Hero />
             </>
           }
@@ -23,7 +23,6 @@ function App() {
         <Route path="/snippets" element={<SnippetsPage />} />
         <Route path="/page/:pageId" element={<PageDetail />} />
         <Route path="*" element={<NotFound />} />
-        {/* <Route path="/tutorial" element={<TutorialsList />}></Route> */}
       </Routes>
     </Router>
   );
