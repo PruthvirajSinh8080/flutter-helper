@@ -3,7 +3,7 @@ import React from "react";
 
 const ContributorCard = ({ name, role, avatar, github, twitter }) => {
   return (
-    <div className="rounded-lg border border-white shadow-md p-6 flex flex-col items-center">
+    <div className="rounded-lg border border-white shadow-md p-6 flex flex-col items-center bg-opacity-0 backdrop-blur-md">
       <img
         src={avatar}
         alt={name}

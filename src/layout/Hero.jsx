@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
       </section>
       <main class="container mx-auto px-4 py-12 space-y-12">
-        <div class="border border-white rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition duration-300">
+        <div class="border border-white rounded-3xl p-8 shadow-2xl">
           <h2 class="text-4xl font-bold mb-6">About Flutter Helper</h2>
           <p class="text-xl leading-relaxed">
             Flutter Helper delivers cutting-edge tutorials and expert advice for
@@ -67,7 +67,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div class="rounded-3xl transform hover:scale-105 transition duration-300 p-8">
+        <div class="rounded-3xl p-8">
           <div className="flex justify-center">
             <h2 class="text-4xl font-bold mb-6">Our Contributors</h2>
           </div>

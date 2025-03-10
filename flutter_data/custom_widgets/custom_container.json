@@ -1,0 +1,141 @@
+{
+  "title": "Custom Container Widget in Flutter",
+  "description": "A highly customizable container widget for Flutter applications that allows developers to easily create containers with various styling options such as borders, gradients, shadows, and more.",
+  "content": [
+    {
+      "type": "overview",
+      "content": "The `CustomContainer` widget is a reusable and flexible Flutter widget that extends the functionality of the default `Container` widget. It provides additional customization options like gradients, box shadows, border radius, and more, making it ideal for creating visually appealing UI components."
+    },
+    {
+      "type": "full_snippet",
+      "content": "Below is the complete implementation of the `CustomContainer` widget:",
+      "snippet": "import 'package:flutter/material.dart';\n\nclass CustomContainer extends StatelessWidget {\n  const CustomContainer({\n    super.key,\n    this.alignment,\n    this.child,\n    this.constraints,\n    this.height,\n    this.width,\n    this.margin,\n    this.padding,\n    this.borderColor,\n    this.borderWidth,\n    this.image,\n    this.backGroundColor,\n    this.borderRadius,\n    this.boxShadow,\n    this.shape = BoxShape.rectangle,\n    this.gradient,\n  });\n\n  final AlignmentGeometry? alignment;\n  final Widget? child;\n  final BoxConstraints? constraints;\n  final double? height;\n  final double? width;\n  final EdgeInsetsGeometry? margin;\n  final EdgeInsetsGeometry? padding;\n  final Color? borderColor;\n  final double? borderWidth;\n  final DecorationImage? image;\n  final Color? backGroundColor;\n  final BorderRadiusGeometry? borderRadius;\n  final List<BoxShadow>? boxShadow;\n  final BoxShape shape;\n  final Gradient? gradient;\n\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      alignment: alignment,\n      constraints: constraints,\n      height: height,\n      width: width,\n      margin: margin,\n      padding: padding,\n      decoration: BoxDecoration(\n        border: Border.all(\n          color: borderColor ?? Colors.transparent,\n          width: borderWidth ?? 2,\n        ),\n        borderRadius: borderRadius,\n        color: backGroundColor,\n        image: image,\n        shape: shape,\n        gradient: gradient,\n        boxShadow: boxShadow,\n      ),\n      child: child,\n    );\n  }\n}"
+    },
+    {
+      "type": "explanation",
+      "content": "The `CustomContainer` widget is built using Flutter's `StatelessWidget`, making it lightweight and reusable. Below is a breakdown of its key components:",
+      "sections": [
+        {
+          "title": "Constructor Parameters",
+          "content": "The widget accepts multiple optional parameters to customize its appearance and behavior:",
+          "parameters": [
+            {
+              "name": "alignment",
+              "type": "AlignmentGeometry?",
+              "description": "Aligns the child widget within the container."
+            },
+            {
+              "name": "child",
+              "type": "Widget?",
+              "description": "The widget to display inside the container."
+            },
+            {
+              "name": "constraints",
+              "type": "BoxConstraints?",
+              "description": "Additional constraints for the container's size."
+            },
+            {
+              "name": "height",
+              "type": "double?",
+              "description": "The height of the container."
+            },
+            {
+              "name": "width",
+              "type": "double?",
+              "description": "The width of the container."
+            },
+            {
+              "name": "margin",
+              "type": "EdgeInsetsGeometry?",
+              "description": "The margin around the container."
+            },
+            {
+              "name": "padding",
+              "type": "EdgeInsetsGeometry?",
+              "description": "The padding inside the container."
+            },
+            {
+              "name": "borderColor",
+              "type": "Color?",
+              "description": "The color of the container's border."
+            },
+            {
+              "name": "borderWidth",
+              "type": "double?",
+              "description": "The width of the container's border."
+            },
+            {
+              "name": "image",
+              "type": "DecorationImage?",
+              "description": "A background image for the container."
+            },
+            {
+              "name": "backGroundColor",
+              "type": "Color?",
+              "description": "The background color of the container."
+            },
+            {
+              "name": "borderRadius",
+              "type": "BorderRadiusGeometry?",
+              "description": "The radius of the container's corners."
+            },
+            {
+              "name": "boxShadow",
+              "type": "List<BoxShadow>?",
+              "description": "A list of shadows to apply to the container."
+            },
+            {
+              "name": "shape",
+              "type": "BoxShape",
+              "description": "The shape of the container (rectangle or circle). Defaults to `BoxShape.rectangle`."
+            },
+            {
+              "name": "gradient",
+              "type": "Gradient?",
+              "description": "A gradient to use as the container's background."
+            }
+          ]
+        },
+        {
+          "title": "BoxDecoration",
+          "content": "The `BoxDecoration` class is used to style the container. It supports borders, gradients, shadows, and more. Key properties include:",
+          "properties": [
+            {
+              "name": "border",
+              "description": "Defines the border using `Border.all` with customizable color and width."
+            },
+            {
+              "name": "borderRadius",
+              "description": "Rounds the corners of the container."
+            },
+            {
+              "name": "color",
+              "description": "Sets the background color of the container."
+            },
+            {
+              "name": "image",
+              "description": "Applies a background image to the container."
+            },
+            {
+              "name": "gradient",
+              "description": "Applies a gradient background to the container."
+            },
+            {
+              "name": "boxShadow",
+              "description": "Adds shadows to the container for depth effects."
+            }
+          ]
+        },
+        {
+          "title": "Usage Example",
+          "content": "Here's an example of how to use the `CustomContainer` widget:",
+          "snippet": "CustomContainer(\n  height: 200,\n  width: 200,\n  padding: EdgeInsets.all(16),\n  borderColor: Colors.blue,\n  borderWidth: 2,\n  borderRadius: BorderRadius.circular(12),\n  gradient: LinearGradient(\n    colors: [Colors.blue, Colors.purple],\n    begin: Alignment.topLeft,\n    end: Alignment.bottomRight,\n  ),\n  boxShadow: [\n    BoxShadow(\n      color: Colors.black.withOpacity(0.2),\n      blurRadius: 8,\n      offset: Offset(2, 2),\n    ),\n  ],\n  child: Text('Hello, World!'),\n);"
+        }
+      ]
+    },
+    {
+      "type": "conclusion",
+      "content": "The `CustomContainer` widget is a powerful and reusable component for Flutter developers. It simplifies the process of creating styled containers and promotes code reusability. By leveraging its customizable properties, you can create visually appealing UI components with minimal effort."
+    }
+  ]
+}
