@@ -1,4 +1,4 @@
-import{j as e}from"./index-ftbKDWli.js";import{C as t}from"./code_snippet_component-fVu7hiFY.js";function n(){return e.jsxs(e.Fragment,{children:[e.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Custom Container"}),e.jsx(t,{code:r[0],language:"dart"})]})}const r=[`import 'package:flutter/material.dart';
+import{j as e}from"./index-CxooI3pn.js";import{C as t}from"./code_snippet_component-qJi4u-8I.js";function n(){return e.jsxs(e.Fragment,{children:[e.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Custom Container"}),e.jsx(t,{code:r[0],language:"dart"})]})}const r=[`import 'package:flutter/material.dart';
 import 'package:fruit_fusion_veggies_delight/providers/localization_provider/localization_provider.dart';
 import 'package:fruit_fusion_veggies_delight/utils/border_helper/border_helper.dart';
 import 'package:provider/provider.dart';

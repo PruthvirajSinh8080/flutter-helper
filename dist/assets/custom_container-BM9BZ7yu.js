@@ -1,4 +1,4 @@
-import{j as i}from"./index-ftbKDWli.js";import{C as t}from"./code_snippet_component-fVu7hiFY.js";function r(){return i.jsxs(i.Fragment,{children:[i.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Custom Container"}),i.jsx(t,{code:o[0],language:"dart"})]})}const o=[`import 'package:flutter/material.dart';
+import{j as i}from"./index-CxooI3pn.js";import{C as t}from"./code_snippet_component-qJi4u-8I.js";function r(){return i.jsxs(i.Fragment,{children:[i.jsx("h1",{className:"text-3xl font-bold mb-4",children:"Custom Container"}),i.jsx(t,{code:o[0],language:"dart"})]})}const o=[`import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer(
