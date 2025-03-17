@@ -10,145 +10,17 @@
     crossorigin="anonymous"></script>
   <title class="text-red-500">Making Flutter Easy</title>
 </head>
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1470955233021-2c79a52e5034?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: auto;
+  }
+</style>
 
-<body
-  class="font-['Inter'] text-white min-h-screen min-h-screen bg-fixed bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white"
-  id="main-root-body">
+<body class="font-['Inter'] text-white min-h-screen min-h-screen bg-fixed " id="main-root-body">
 
   <script type="module" src="src/main.jsx"></script>
 </body>
 
 </html>
-<!-- <!DOCTYPE html>
-<html lang="en" class="dark">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flutter Snippets | Code Hub</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    pre code {
-      font-family: 'Roboto Mono', monospace;
-    }
-
-
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fadeInUp {
-      animation: fadeInUp 0.8s ease-out forwards;
-    }
-
-    .dark .glass {
-      background: rgba(30, 41, 59, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .scrollbar::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
-    }
-
-    .scrollbar {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-    }
-  </style>
-</head>
-
-<body
-  class="bg-gray-900 text-white min-h-screen min-h-screen bg-fixed bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
-  <header class="py-10 text-center animate-fadeInUp">
-    <h1
-      class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent ">
-      Flutter Code Snippets
-    </h1>
-    <p class="mt-3 text-lg text-gray-300">Quickly find and use Flutter code examples.</p>
-  </header>
-
-  <main class="container mx-auto px-4 py-8 animate-fadeInUp">
-    <section class="p-6 mb-8 rounded-3xl bg-purple-700 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20">
-      <h2 class="text-2xl font-semibold mb-4 ">Fetching Data from API</h2>
-      <div class="bg-purple-700 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-20 ">
-        <button
-          class="absolute top-2 right-2 glass hover:bg-violet-500 animation-delay-200 text-white px-3 py-1 rounded-md text-sm rounded-2xl"
-          onclick="copyCode()">Copy</button>
-
-        <div
-          class="mt-2 max-h-auto overflow-y-scroll rounded-lg scrollbar border border-white border-radius-md scrollbar-thumb-blue-500 scrollbar-track-gray-300 px-4">
-          <pre><code class="language-dart">
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-
-Future&lt;void&gt; fetchData() async {
-  final response = await http.get(Uri.parse('https://example.com/data'));
-  if (response.statusCode == 200) {
-    var data = jsonDecode(response.body);
-    // Process data here...
-  } else {
-    throw Exception('Failed to load data');
-  }
-}
-          </code></pre>
-        </div>
-      </div>
-      <h2 class="text-2xl font-semibold mb-4 mt-4">Fetching Data from API</h2>
-
-      <p class="text-gray-300">This code snippet demonstrates how to fetch data from an API using the <code
-          class="text-white bg-purple-700 p-1 ps-2 pe-2 rounded-md">http</code>
-    </section>
-  </main>
-
-  <footer class="text-center py-6 text-gray-500 sticky">
-    <div class=" glass rounded-full px-6 py-3 mx-auto max-w-xs shadow-md">
-      <p class="text-sm">Ads here</p>
-    </div>
-  </footer>
-
-  <script>
-    function copyCode() {
-      const code = `import 'dart:convert';
-import 'package:http/http.dart' as http;
-
-Future<void> fetchData() async {
-  final response = await http.get(Uri.parse('https://example.com/data'));
-  if (response.statusCode == 200) {
-    var data = jsonDecode(response.body);
-    // Process data here...
-  } else {
-    throw Exception('Failed to load data');
-  }
-}`;
-      navigator.clipboard.writeText(code).then(() => {
-        alert('Code copied!');
-      });
-    }
-  </script>
-</body>
-
-</html> -->

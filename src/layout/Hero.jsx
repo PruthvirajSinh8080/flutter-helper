@@ -1,34 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ContributorCard from "../components/ContributorCard";
 
 const Hero = () => {
-  const [contributors, setContributors] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const fetchContributors = async () => {
-    try {
-      const response = await fetch(
-        "https://api.github.com/repos/PruthvirajSinh8080/flutter-helper/contributors"
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      setContributors(data);
-      setLoading(false);
-    } catch (error) {
-      setError(error.message);
-      setLoading(false);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchContributors();
-  }, []);
-
   return (
     <>
       <section class="relative flex items-center justify-center h-screen overflow-hidden">
@@ -65,33 +38,6 @@ const Hero = () => {
             building beautiful, high-performance Flutter apps. Explore our
             resources and join a vibrant community of developers.
           </p>
-        </div>
-
-        <div class="rounded-3xl p-8">
-          <div className="flex justify-center">
-            <h2 class="text-4xl font-bold mb-6">Our Contributors</h2>
-          </div>
-
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full  h-16 w-16 border-t-4 border-b-4 border-gray-900"></div>
-            </div>
-          ) : error ? (
-            <div className="text-red-500 text-center">Error: {error}</div>
-          ) : (
-            <ul class="space-y-4 text-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {contributors.map((contributor) => (
-                <li key={contributor.id}>
-                  <ContributorCard
-                    name={contributor.login}
-                    role={contributor.contributions}
-                    avatar={contributor.avatar_url}
-                    github={contributor.html_url}
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </main>
     </>
