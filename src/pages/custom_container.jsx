@@ -1,5 +1,5 @@
 import React from "react";
-import CodeSnippet from "../components/code_snippet_component";
+import CodeSnippet from "../components/CodeSnippet";
 
 export default function CustomContainer() {
   return (

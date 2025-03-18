@@ -1,25 +1,17 @@
-import Hero from "./layout/Hero";
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
-import NotFound from "./pages/NotFound";
-import ListHelper from "./list_helper/list";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import ListingPage from "./pages/ListingPage";
+import WidgetPage from "./pages/WidgetPage";
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-            </>
-          }
-        ></Route>
-        <Route path="*" element={<NotFound />} />
-        <Route path="/tutorials" element={<ListHelper />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/listing" element={<ListingPage />} />
+      <Route path="/widget/:id" element={<WidgetPage />} />
+    </Routes>
   );
-}
+};
 
 export default App;
